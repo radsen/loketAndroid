@@ -2,6 +2,7 @@ package com.kzlabs.loket.di.components;
 
 import com.kzlabs.loket.authentication.AccountAuthenticator;
 import com.kzlabs.loket.jobs.PocketJob;
+import com.kzlabs.loket.jobs.PocketPost;
 import com.kzlabs.loket.ui.activities.MainLoketActivity;
 import com.kzlabs.loket.di.modules.LoketModule;
 import com.kzlabs.loket.di.scopes.UserScope;
@@ -29,4 +30,6 @@ public interface LoketComponent {
     void inject(AccountAuthenticator accountAuthenticator);
 
     void inject(PocketJob pocketJob);
+
+    void inject(PocketPost pocketPost);
 }

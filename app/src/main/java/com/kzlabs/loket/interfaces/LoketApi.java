@@ -24,4 +24,10 @@ public interface LoketApi {
 
     @GET("pockets")
     Call<DataWrapper> getPockets();
+
+    @FormUrlEncoded
+    @POST("pockets")
+    Call<Pocket> createPocket(@Field("destination") String destination,
+                              @Field("value") float value,
+                              @Field("description") String description);
 }

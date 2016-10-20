@@ -51,7 +51,7 @@ public class PocketAdapter extends RecyclerView.Adapter<PocketAdapter.ViewHolder
                 break;
         }
         holder.ivStatus.setImageResource(status);
-        int pocketValue = (pocket.getValue() > 0)?0:0;
+        int pocketValue = (pocket.getValue() > 0)?R.mipmap.ic_launcher:0;
         holder.ivPocket.setImageResource(pocketValue);
         holder.tvDescription.setText(pocket.getDescription());
     }
