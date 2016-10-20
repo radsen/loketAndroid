@@ -6,4 +6,6 @@ package com.kzlabs.loket.interfaces;
 public interface LoketInterface {
 
     String USER_KEY = "co.loket.user";
+
+    String POCKET_KEY = "co.loket.pocket";
 }

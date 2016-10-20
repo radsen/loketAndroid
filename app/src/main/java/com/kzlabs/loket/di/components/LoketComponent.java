@@ -1,13 +1,13 @@
 package com.kzlabs.loket.di.components;
 
 import com.kzlabs.loket.authentication.AccountAuthenticator;
-import com.kzlabs.loket.jobs.PocketJob;
-import com.kzlabs.loket.jobs.PocketPost;
-import com.kzlabs.loket.ui.activities.MainLoketActivity;
 import com.kzlabs.loket.di.modules.LoketModule;
 import com.kzlabs.loket.di.scopes.UserScope;
 import com.kzlabs.loket.jobs.LoginJob;
-import com.kzlabs.loket.ui.activities.PocketActivity;
+import com.kzlabs.loket.jobs.PocketJob;
+import com.kzlabs.loket.jobs.PocketPost;
+import com.kzlabs.loket.ui.activities.LoginActivity;
+import com.kzlabs.loket.ui.activities.PocketsActivity;
 import com.kzlabs.loket.ui.fragments.LoginFragment;
 
 import dagger.Component;
@@ -23,13 +23,13 @@ public interface LoketComponent {
 
     void inject(LoginFragment fragment);
 
-    void inject(MainLoketActivity mainLoketActivity);
-
-    void inject(PocketActivity pocketActivity);
-
     void inject(AccountAuthenticator accountAuthenticator);
 
     void inject(PocketJob pocketJob);
 
     void inject(PocketPost pocketPost);
+
+    void inject(PocketsActivity pocketsActivity);
+
+    void inject(LoginActivity loginActivity);
 }

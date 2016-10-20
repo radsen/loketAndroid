@@ -8,12 +8,18 @@ import android.os.Parcelable;
  */
 public class User implements Parcelable {
 
-    private String userId;
+    private String id;
     private String token;
+    private String phoneNumber;
 
     protected User(Parcel in) {
-        userId = in.readString();
+        id = in.readString();
         token = in.readString();
+        phoneNumber = in.readString();
+    }
+
+    public User(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -36,12 +42,20 @@ public class User implements Parcelable {
         this.token = token;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getId() {
+        return id;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
@@ -51,7 +65,8 @@ public class User implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(userId);
+        parcel.writeString(id);
         parcel.writeString(token);
+        parcel.writeString(phoneNumber);
     }
 }

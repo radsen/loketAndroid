@@ -6,7 +6,7 @@ import android.os.Parcel;
  * Created by radsen on 10/19/16.
  */
 
-public interface AuthenticationConstants {
+public interface AuthConstants {
     // Account type id
     String ACCOUNT_TYPE = "co.loket";
 
@@ -15,4 +15,10 @@ public interface AuthenticationConstants {
 
     // Auth token type
     String AUTH_TOKEN_TYPE = ACCOUNT_TYPE;
+
+    // Auth key for Digits.
+    String PROVIDER = "X-Auth-Service-Provider";
+
+    // Auth key for Digits.
+    String CREDENTIALS = "X-Verify-Credentials-Authorization";
 }

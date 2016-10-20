@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <solid
+    android:color="@color/colorAccent">
+  </solid>
+
+  <corners
+    android:bottomLeftRadius="@dimen/create_pocket_rounded_corner_radius"
+    android:bottomRightRadius="@dimen/create_pocket_rounded_corner_radius"
+    android:topLeftRadius="@dimen/no_dp"
+    android:topRightRadius="@dimen/no_dp">
+  </corners>
+
+</shape>

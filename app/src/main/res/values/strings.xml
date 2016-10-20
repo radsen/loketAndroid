@@ -1,6 +1,17 @@
 <resources>
-    <string name="app_name">Loket</string>
-    <string name="dgts_consumer_key">QB43jOo47wKyAKzGEQtU7h8BO</string>
-    <string name="dgts_consumer_secret">eYivqROit07OrVR2EVTVUcBlGRlRyPqd47PPGCAwLFPCpdxcL4</string>
-    <string name="base_url">https://staging-loket.herokuapp.com/v1/</string>
+  <string name="app_name">Loket</string>
+  <string name="action_login">Iniciar sesión</string>
+  <string name="prompt_cellphone">Número de celular</string>
+  <string name="error_incorrect_cellphone">El número de celular parece ser incorrecto</string>
+  <string name="pockets">Bolsillos</string>
+  <string name="prompt_destination_cellphone">Número celular del destinatario</string>
+  <string name="prompt_value">Valor</string>
+  <string name="prompt_description">Descripción</string>
+  <string name="action_add">Adicionar</string>
+  <string name="set_free">Liberar</string>
+  <string name="free_set">Liberado</string>
+  <string name="error_auth">Error de autenticación</string>
+  <string name="dgts_consumer_key">QB43jOo47wKyAKzGEQtU7h8BO</string>
+  <string name="dgts_consumer_secret">eYivqROit07OrVR2EVTVUcBlGRlRyPqd47PPGCAwLFPCpdxcL4</string>
+  <string name="base_url">https://staging-loket.herokuapp.com/v1/</string>
 </resources>

@@ -44,11 +44,11 @@ public class ApiAuthenticator implements Authenticator {
         if (ActivityCompat.checkSelfPermission(application, Manifest.permission.GET_ACCOUNTS) !=
                 PackageManager.PERMISSION_GRANTED) {
 
-            Account[] accounts = accountManager.getAccountsByType(AuthenticationConstants.ACCOUNT_TYPE);
+            Account[] accounts = accountManager.getAccountsByType(AuthConstants.ACCOUNT_TYPE);
 
             if(accounts.length != 0){
                 String token = accountManager.peekAuthToken(accounts[0],
-                        AuthenticationConstants.ACCOUNT_TYPE);
+                        AuthConstants.ACCOUNT_TYPE);
                 if(token != null){
                     request = response.request().newBuilder()
                             .addHeader(HttpHeaders.ACCEPT, "application/json")

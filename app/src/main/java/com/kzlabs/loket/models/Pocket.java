@@ -3,6 +3,8 @@ package com.kzlabs.loket.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.Gson;
+
 /**
  * Created by radsen on 10/18/16.
  */
@@ -23,6 +25,14 @@ public class Pocket implements Parcelable{
         destination = in.readParcelable(User.class.getClassLoader());
         description = in.readString();
         status = in.readInt();
+    }
+
+    public Pocket(float value, User origin, User destination, String description, int status) {
+        this.value = value;
+        this.origin = origin;
+        this.destination = destination;
+        this.description = description;
+        this.status = status;
     }
 
     public static final Creator<Pocket> CREATOR = new Creator<Pocket>() {
@@ -98,5 +108,10 @@ public class Pocket implements Parcelable{
         parcel.writeParcelable(destination, i);
         parcel.writeString(description);
         parcel.writeInt(status);
+    }
+
+    @Override
+    public String toString() {
+        return (new Gson()).toJson(this);
     }
 }

@@ -8,4 +8,74 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CellphoneEditText">
+        <item name="android:drawableLeft">@mipmap/ic_phone_android_black_24dp</item>
+        <item name="android:drawablePadding">@dimen/edit_text_drawable_padding</item>
+    </style>
+
+    <style name="ButtonColorAccentBackground">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="FabAddBackground">
+        <item name="android:src">@mipmap/ic_add_white_24dp</item>
+    </style>
+
+    <style name="WhiteBoldLargeText" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RedBoldLargeText" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WhiteBoldMediumText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WhiteSmallText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CreatePocketBackground">
+        <item name="android:background">@drawable/bkg_create_pocket</item>
+    </style>
+
+    <style name="ValueEditText">
+        <item name="android:drawableLeft">@mipmap/ic_attach_money_black_24dp</item>
+        <item name="android:drawablePadding">@dimen/edit_text_drawable_padding</item>
+    </style>
+
+    <style name="DescriptionEditText">
+        <item name="android:drawableLeft">@mipmap/ic_create_black_24dp</item>
+        <item name="android:drawablePadding">@dimen/edit_text_drawable_padding</item>
+    </style>
+
+    <style name="CreatePocketFinalAction">
+        <item name="android:background">@drawable/color_accent_rounded_bottom_corners</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PocketImgSrc">
+        <item name="android:src">@mipmap/ic_lock_outline_white_36dp</item>
+    </style>
+
+    <style name="BtnSetFreeBackground">
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="WhiteMediumText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

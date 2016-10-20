@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -25,7 +26,7 @@
                 android:resource="@xml/authenticator"/>
         </service>
 
-        <activity android:name=".ui.activities.MainLoketActivity">
+        <activity android:name=".ui.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +34,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activities.PocketActivity"/>
+        <activity android:name=".ui.activities.PocketsActivity"/>
 
         <meta-data
             android:name="io.fabric.ApiKey"

@@ -1,7 +1,13 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="gv_spacing">10dp</dimen>
-    <dimen name="gv_col_width">90dp</dimen>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+  <dimen name="edit_text_drawable_padding">8dp</dimen>
+  <dimen name="grid_column_width">90dp</dimen>
+  <dimen name="grid_spacing">10dp</dimen>
+  <dimen name="pocket_card_corner_radius">4dp</dimen>
+  <dimen name="pocket_card_ic_padding">7dp</dimen>
+  <dimen name="pocket_card_info_margin_top">40dp</dimen>
+  <dimen name="create_pocket_rounded_corner_radius">11dp</dimen>
+  <dimen name="no_dp">0dp</dimen>
 </resources>

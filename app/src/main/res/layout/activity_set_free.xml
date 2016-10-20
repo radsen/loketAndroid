@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/pocket_card_info_margin_top"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+      android:id="@+id/iv_pocket_category"
+      style="@style/PocketImgSrc"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:padding="@dimen/pocket_card_ic_padding"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_value_label"
+      style="@style/WhiteBoldLargeText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:gravity="start"
+      android:text="@string/prompt_value"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_value"
+      style="@style/WhiteMediumText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:gravity="start"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_description_label"
+      style="@style/WhiteBoldLargeText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:gravity="start"
+      android:text="@string/prompt_description"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_description"
+      style="@style/WhiteMediumText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/grid_spacing"
+      android:gravity="start"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_destination_label"
+      style="@style/WhiteBoldLargeText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:gravity="start"
+      android:text="@string/prompt_destination_cellphone"/>
+
+    <android.support.v7.widget.AppCompatTextView
+      android:id="@+id/tv_pocket_destination"
+      style="@style/WhiteMediumText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="@dimen/grid_spacing"
+      android:layout_marginEnd="@dimen/grid_spacing"
+      android:layout_marginStart="@dimen/grid_spacing"
+      android:layout_marginTop="@dimen/activity_vertical_margin"
+      android:gravity="start"/>
+
+  </LinearLayout>
+
+  <android.support.v7.widget.AppCompatButton
+    android:id="@+id/btn_set_free"
+    style="@style/BtnSetFreeBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="@dimen/pocket_card_info_margin_top"
+    android:text="@string/set_free"/>
+
+</RelativeLayout>

@@ -1,12 +1,9 @@
 package com.kzlabs.loket.authentication;
 
-import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.Application;
-import android.content.pm.PackageManager;
 import android.support.test.espresso.core.deps.guava.net.HttpHeaders;
-import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -28,8 +25,8 @@ public class TokenInterceptor implements Interceptor {
 
     @Inject
     public TokenInterceptor(Application application, AccountManager manager) {
-        Account[] account = manager.getAccountsByType(AuthenticationConstants.ACCOUNT_TYPE);
-        token = manager.peekAuthToken(account[0], AuthenticationConstants.ACCOUNT_TYPE);
+        Account[] account = manager.getAccountsByType(AuthConstants.ACCOUNT_TYPE);
+        token = manager.peekAuthToken(account[0], AuthConstants.ACCOUNT_TYPE);
     }
 
     @Override
