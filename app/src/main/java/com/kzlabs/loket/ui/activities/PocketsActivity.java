@@ -93,10 +93,6 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
     if(event.errorMessage() != null){
       displayMessages(event.errorMessage());
     } else {
-      if(mPocketList.size() > 0){
-        mPocketList.clear();
-      }
-
       Log.d(TAG, "Has pockets");
       if(event.getPockets().size() > 0){
         mPocketList.addAll(event.getPockets());
@@ -186,7 +182,6 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
 
   @Override
   public void refreshPockets() {
-    fillAdapter();
     mAdapter.notifyDataSetChanged();
   }
 

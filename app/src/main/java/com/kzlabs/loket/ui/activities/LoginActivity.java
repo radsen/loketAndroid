@@ -43,7 +43,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     public static final String TAG = LoginActivity.class.getSimpleName();
 
-    @BindView(R.id.btn_login)
+//    @BindView(R.id.btn_login)
     DigitsAuthButton loginDab;
     @BindView(R.id.pb_progress)
     ProgressBar progressBar;
@@ -59,6 +59,9 @@ public class LoginActivity extends BaseActivity implements LoginView {
         setContentView(R.layout.activity_login);
         LoketApplication.getInstance().getLoketComponent().inject(this);
         ButterKnife.bind(this);
+
+        loginDab = (DigitsAuthButton) findViewById(R.id.btn_login);
+        loginDab.setCallback((AuthCallback) this);
     }
 
     @Override

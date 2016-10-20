@@ -26,7 +26,9 @@ public class TokenInterceptor implements Interceptor {
     @Inject
     public TokenInterceptor(Application application, AccountManager manager) {
         Account[] account = manager.getAccountsByType(AuthConstants.ACCOUNT_TYPE);
-        token = manager.peekAuthToken(account[0], AuthConstants.ACCOUNT_TYPE);
+        if(account != null && account.length > 0){
+            token = manager.peekAuthToken(account[0], AuthConstants.ACCOUNT_TYPE);
+        }
     }
 
     @Override

@@ -11,6 +11,7 @@ import com.kzlabs.loket.events.PocketPostEvent;
 import com.kzlabs.loket.interfaces.LoketApi;
 import com.kzlabs.loket.interfaces.Priority;
 import com.kzlabs.loket.models.Pocket;
+import com.kzlabs.loket.models.ResponsePocket;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -53,7 +54,7 @@ public class PocketPost extends Job {
         Response response = api.createPocket(destination, value, description).execute();
 
         if(response.isSuccessful()){
-            Pocket pocket = (Pocket) response.body();
+            Pocket pocket = ((ResponsePocket) response.body()).getPocket();
             if(pocket != null){
                 bus.post(new PocketPostEvent(pocket));
             }

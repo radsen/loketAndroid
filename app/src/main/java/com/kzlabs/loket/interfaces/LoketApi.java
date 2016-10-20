@@ -3,6 +3,7 @@ package com.kzlabs.loket.interfaces;
 import com.kzlabs.loket.models.Auth;
 import com.kzlabs.loket.models.DataWrapper;
 import com.kzlabs.loket.models.Pocket;
+import com.kzlabs.loket.models.ResponsePocket;
 import com.kzlabs.loket.models.User;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public interface LoketApi {
 
     @FormUrlEncoded
     @POST("pockets")
-    Call<Pocket> createPocket(@Field("destination") String destination,
-                              @Field("value") float value,
-                              @Field("description") String description);
+    Call<ResponsePocket> createPocket(@Field("destination") String destination,
+                                      @Field("value") float value,
+                                      @Field("description") String description);
 }

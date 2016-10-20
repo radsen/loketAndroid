@@ -14,4 +14,5 @@
   <string name="dgts_consumer_key">QB43jOo47wKyAKzGEQtU7h8BO</string>
   <string name="dgts_consumer_secret">eYivqROit07OrVR2EVTVUcBlGRlRyPqd47PPGCAwLFPCpdxcL4</string>
   <string name="base_url">https://staging-loket.herokuapp.com/v1/</string>
+  <string name="message_adding">Adicionando...</string>
 </resources>

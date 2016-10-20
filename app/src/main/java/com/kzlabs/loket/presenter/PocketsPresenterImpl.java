@@ -39,11 +39,14 @@ public class PocketsPresenterImpl implements PocketsPresenter {
           .findViewById(R.id.et_value);
       final AppCompatEditText addPocketDescription = (AppCompatEditText) createPocketView
           .findViewById(R.id.et_description);
-      AppCompatButton addPocketButton = (AppCompatButton) createPocketView
+      final AppCompatButton addPocketButton = (AppCompatButton) createPocketView
           .findViewById(R.id.btn_add);
       addPocketButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+          addPocketButton.setText(mPocketsView.getActivity().getResources()
+                  .getString(R.string.message_adding));
+          addPocketButton.setEnabled(false);
           String destination = addPocketDestination.getText().toString();
           User destinationUser = new User(destination);
           String valueAsString = addPocketValue.getText().toString();

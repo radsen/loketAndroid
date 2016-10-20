@@ -36,6 +36,8 @@
 
         <activity android:name=".ui.activities.PocketsActivity"/>
 
+        <activity android:name=".ui.activities.SetFreeActivity"/>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="0a5e58360b38b238682451022da46fb4823fe3b9" />
