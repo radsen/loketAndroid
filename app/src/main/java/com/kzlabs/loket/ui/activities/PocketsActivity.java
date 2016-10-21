@@ -19,7 +19,7 @@ import com.kzlabs.loket.events.PocketEvent;
 import com.kzlabs.loket.events.PocketPostEvent;
 import com.kzlabs.loket.interfaces.LoketInterface;
 import com.kzlabs.loket.jobs.PocketJob;
-import com.kzlabs.loket.jobs.PocketPost;
+import com.kzlabs.loket.jobs.PocketPostJob;
 import com.kzlabs.loket.models.Pocket;
 import com.kzlabs.loket.models.User;
 import com.kzlabs.loket.presenter.PocketsPresenter;
@@ -57,13 +57,10 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
   JobManager jobManager;
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     LoketApplication.getInstance().getLoketComponent().inject(this);
     setContentView(R.layout.activity_pockets);
-    getSupportActionBar().setDisplayShowHomeEnabled(true);
-    getSupportActionBar().setIcon(R.mipmap.ic_drafts_white_24dp);
-    getSupportActionBar().setTitle(" " + getResources().getString(R.string.pockets));
     ButterKnife.bind(this);
 
     user = getIntent().getParcelableExtra(LoketInterface.USER_KEY);
@@ -95,6 +92,7 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
     } else {
       Log.d(TAG, "Has pockets");
       if(event.getPockets().size() > 0){
+        mPocketList.clear();
         mPocketList.addAll(event.getPockets());
         refresh();
       }
@@ -111,16 +109,6 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
       refresh();
       hideDialog();
     }
-  }
-
-  private void displayMessages(final String message) {
-    runOnUiThread(new Runnable() {
-      @Override
-      public void run() {
-        Toast.makeText(getBaseContext(), message,
-            Toast.LENGTH_SHORT).show();
-      }
-    });
   }
 
   private void refresh() {
@@ -147,7 +135,7 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i(TAG, "Position clicked: " + position);
         Pocket pocket = mPocketList.get(position);
-        if (pocket.getStatus() == 0) {
+        if (pocket.getStatus() == 1) {
           // The transaction can be free set.
           Intent navigateToPocketIntent = new Intent(PocketsActivity.this, SetFreeActivity.class);
           navigateToPocketIntent.putExtra(LoketInterface.POCKET_KEY, pocket);
@@ -188,7 +176,7 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
   @Override
   public void createPocket(Pocket pocket) {
     if (pocket != null) {
-      jobManager.addJobInBackground(new PocketPost(pocket.getDestination().getPhoneNumber(),
+      jobManager.addJobInBackground(new PocketPostJob(pocket.getDestination().getPhoneNumber(),
           pocket.getValue(), pocket.getDescription()));
     }
   }

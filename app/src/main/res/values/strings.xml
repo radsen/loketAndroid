@@ -15,4 +15,10 @@
   <string name="dgts_consumer_secret">eYivqROit07OrVR2EVTVUcBlGRlRyPqd47PPGCAwLFPCpdxcL4</string>
   <string name="base_url">https://staging-loket.herokuapp.com/v1/</string>
   <string name="message_adding">Adicionando...</string>
+  <string name="action_confirming">confirmando</string>
+  <string name="actionRejecting">Cancelando</string>
+  <string name="action_release">Liberar</string>
+  <string name="action_cancel">Cancelar</string>
+  <string name="txt_destination">Destino:</string>
+  <string name="txt_origin">Origen:</string>
 </resources>

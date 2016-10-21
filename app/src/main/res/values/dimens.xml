@@ -7,7 +7,8 @@
   <dimen name="grid_spacing">10dp</dimen>
   <dimen name="pocket_card_corner_radius">4dp</dimen>
   <dimen name="pocket_card_ic_padding">7dp</dimen>
-  <dimen name="pocket_card_info_margin_top">40dp</dimen>
+  <dimen name="pocket_card_info_margin_top">20dp</dimen>
   <dimen name="create_pocket_rounded_corner_radius">11dp</dimen>
   <dimen name="no_dp">0dp</dimen>
+  <dimen name="txt_vertical_spacing">4dp</dimen>
 </resources>

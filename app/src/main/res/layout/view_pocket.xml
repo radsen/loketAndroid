@@ -12,48 +12,86 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardBackgroundColor="@color/colorPrimary"
     card_view:cardCornerRadius="@dimen/pocket_card_corner_radius">
-
-    <android.support.v7.widget.AppCompatImageView
-      android:id="@+id/iv_pocket_category"
-      style="@style/PocketImgSrc"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_horizontal"
-      android:padding="@dimen/pocket_card_ic_padding"/>
 
     <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/pocket_card_info_margin_top"
       android:orientation="vertical">
 
-      <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_pocket_value"
-        style="@style/RedBoldLargeText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:gravity="center"/>
+      <RelativeLayout
+          android:id="@+id/rlIdentificationColor"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/colorAccent">
 
-      <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_pocket_description"
-        style="@style/WhiteSmallText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/grid_spacing"
-        android:gravity="center"/>
+          <android.support.v7.widget.AppCompatTextView
+              android:id="@+id/tv_pocket_value"
+              style="@style/RedBoldLargeText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/activity_vertical_margin"
+              android:gravity="center"/>
 
-      <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/tv_pocket_destination"
-        style="@style/WhiteBoldMediumText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/grid_spacing"
-        android:layout_marginEnd="@dimen/grid_spacing"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:gravity="end"/>
+      </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_pocket_description"
+                style="@style/SmallText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/grid_spacing"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:minLines="2"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:text="fslfkdsa;fadklfgjfs;kgjfs;lkgads;lfjadklsgjfdslkgjfkldgjfdlkgjfdlkgsjsalkgjaslkfgjask;fgjaslkgjaklfd"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_pocket_label"
+                style="@style/SmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_vertical_spacing"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textStyle="italic"
+                android:layout_below="@id/tv_pocket_description"
+                android:text="destino"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_pocket_identification"
+                style="@style/BoldMediumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/txt_vertical_spacing"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_below="@id/tv_pocket_label"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/iv_pocket_category"
+                android:gravity="left"
+                android:text="4324554325435"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_pocket_category"
+                style="@style/PocketImgSrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/pocket_card_ic_padding"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_unlock"
+                android:layout_alignTop="@+id/tv_pocket_label"
+                android:layout_alignBottom="@+id/tv_pocket_identification" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

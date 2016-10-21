@@ -26,7 +26,8 @@
                 android:resource="@xml/authenticator"/>
         </service>
 
-        <activity android:name=".ui.activities.LoginActivity">
+        <activity android:name=".ui.activities.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

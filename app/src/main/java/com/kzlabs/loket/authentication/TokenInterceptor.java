@@ -33,7 +33,6 @@ public class TokenInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Log.d(TAG, "intercept");
         Request originalRequest = chain.request();
 
         // Nothing to add to intercepted request if:
@@ -44,7 +43,7 @@ public class TokenInterceptor implements Interceptor {
             return chain.proceed(originalRequest);
         }
 
-        Log.d(TAG, "Inject Authorization");
+        Log.d(TAG, "Inject Authorization token: " + token);
         // Add authorization header with updated authorization value to  intercepted request
         Request authorisedRequest = originalRequest.newBuilder()
                 .header(HttpHeaders.CONTENT_TYPE, "application/json")

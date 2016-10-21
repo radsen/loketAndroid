@@ -39,26 +39,26 @@ public class ApiAuthenticator implements Authenticator {
     public Request authenticate(Route route, Response response) throws IOException {
         Log.d(TAG, "authenticate");
 
-        Request request = null;
+//        Request request = null;
+//
+//        if (ActivityCompat.checkSelfPermission(application, Manifest.permission.GET_ACCOUNTS) !=
+//                PackageManager.PERMISSION_GRANTED) {
+//
+//            Account[] accounts = accountManager.getAccountsByType(AuthConstants.ACCOUNT_TYPE);
+//
+//            if(accounts.length != 0){
+//                String token = accountManager.peekAuthToken(accounts[0],
+//                        AuthConstants.ACCOUNT_TYPE);
+//                if(token != null){
+//                    request = response.request().newBuilder()
+//                            .addHeader(HttpHeaders.ACCEPT, "application/json")
+//                            .addHeader(HttpHeaders.AUTHORIZATION, token)
+//                            .build();
+//                }
+//            }
+//        }
 
-        if (ActivityCompat.checkSelfPermission(application, Manifest.permission.GET_ACCOUNTS) !=
-                PackageManager.PERMISSION_GRANTED) {
-
-            Account[] accounts = accountManager.getAccountsByType(AuthConstants.ACCOUNT_TYPE);
-
-            if(accounts.length != 0){
-                String token = accountManager.peekAuthToken(accounts[0],
-                        AuthConstants.ACCOUNT_TYPE);
-                if(token != null){
-                    request = response.request().newBuilder()
-                            .addHeader(HttpHeaders.ACCEPT, "application/json")
-                            .addHeader(HttpHeaders.AUTHORIZATION, token)
-                            .build();
-                }
-            }
-        }
-
-        return request;
+        return response.request();
     }
 
 

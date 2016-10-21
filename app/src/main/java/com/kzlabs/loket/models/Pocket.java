@@ -17,6 +17,7 @@ public class Pocket implements Parcelable{
     private User destination;
     private String description;
     private int status;
+    private boolean isSender;
 
     protected Pocket(Parcel in) {
         id = in.readString();
@@ -25,6 +26,7 @@ public class Pocket implements Parcelable{
         destination = in.readParcelable(User.class.getClassLoader());
         description = in.readString();
         status = in.readInt();
+        isSender = in.readByte() != 0;
     }
 
     public Pocket(float value, User origin, User destination, String description, int status) {
@@ -108,10 +110,19 @@ public class Pocket implements Parcelable{
         parcel.writeParcelable(destination, i);
         parcel.writeString(description);
         parcel.writeInt(status);
+        parcel.writeByte((byte) (isSender ? 1 : 0));
     }
 
     @Override
     public String toString() {
         return (new Gson()).toJson(this);
+    }
+
+    public boolean isSender() {
+        return isSender;
+    }
+
+    public void setSender(boolean sender) {
+        isSender = sender;
     }
 }

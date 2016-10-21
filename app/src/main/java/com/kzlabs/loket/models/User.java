@@ -9,13 +9,16 @@ import android.os.Parcelable;
 public class User implements Parcelable {
 
     private String id;
-    private String token;
+    private String email;
     private String phoneNumber;
+    private String token;
+
 
     protected User(Parcel in) {
         id = in.readString();
-        token = in.readString();
+        email = in.readString();
         phoneNumber = in.readString();
+        token = in.readString();
     }
 
     public User(String phoneNumber) {
@@ -66,7 +69,16 @@ public class User implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(id);
-        parcel.writeString(token);
+        parcel.writeString(email);
         parcel.writeString(phoneNumber);
+        parcel.writeString(token);
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

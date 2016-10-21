@@ -54,7 +54,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
     JobManager jobManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         LoketApplication.getInstance().getLoketComponent().inject(this);
@@ -62,6 +62,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
         loginDab = (DigitsAuthButton) findViewById(R.id.btn_login);
         loginDab.setCallback((AuthCallback) this);
+        loginDab.setAuthTheme(android.R.style.Theme_Material);
     }
 
     @Override
