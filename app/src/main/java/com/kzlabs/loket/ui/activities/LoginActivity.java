@@ -62,7 +62,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
         loginDab = (DigitsAuthButton) findViewById(R.id.btn_login);
         loginDab.setCallback((AuthCallback) this);
-        loginDab.setAuthTheme(android.R.style.Theme_Material);
+        loginDab.setAuthTheme(R.style.CustomDigitsTheme);
     }
 
     @Override

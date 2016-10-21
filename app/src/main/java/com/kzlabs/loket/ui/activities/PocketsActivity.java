@@ -38,7 +38,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class PocketsActivity extends BaseActivity implements PocketsView {
+public class PocketsActivity extends AuthenticatorActivity implements PocketsView {
 
   public static final String TAG = PocketsActivity.class.getSimpleName();
 
@@ -80,7 +80,9 @@ public class PocketsActivity extends BaseActivity implements PocketsView {
   @Override
   protected void onStart() {
     super.onStart();
-    jobManager.addJobInBackground(new PocketJob());
+    if(isLoggedIn()){
+      jobManager.addJobInBackground(new PocketJob());
+    }
   }
 
   @Subscribe

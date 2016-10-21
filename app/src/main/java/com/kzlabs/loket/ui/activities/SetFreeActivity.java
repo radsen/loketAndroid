@@ -78,13 +78,25 @@ public class SetFreeActivity extends BaseActivity {
   public void onEvent(PocketPutEvent event){
     if(event.getMessage() != null){
       displayMessages(event.getMessage());
-      int text = (pocket.isSender()) ? R.string.action_release : R.string.action_cancel;
-      pocketSetFreeButton.setText(text);
-      pocketSetFreeButton.setEnabled(true);
+      runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          int text = (pocket.isSender()) ? R.string.action_release : R.string.action_cancel;
+          pocketSetFreeButton.setText(text);
+          pocketSetFreeButton.setEnabled(true);
+        }
+      });
+
     } else {
-      pocketImgView.setImageResource(R.mipmap.ic_lock_open_white_36dp);
-      pocketSetFreeButton.setBackgroundColor(ContextCompat.getColor(this, R.color.green));
-      pocketSetFreeButton.setText(getResources().getString(R.string.free_set));
+      runOnUiThread(new Runnable() {
+        @Override
+        public void run() {
+          pocketImgView.setImageResource(R.mipmap.ic_lock_open_white_36dp);
+          pocketSetFreeButton.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.green));
+          pocketSetFreeButton.setText(getResources().getString(R.string.free_set));
+        }
+      });
+
     }
   }
 }
